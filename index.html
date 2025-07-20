@@ -1,33 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Daniil Fedorov CV</title>
    <style>
-   	.heart{
-       width: 100px;
-       height: 100px;
-       transform: rotate(45deg);
-       transform-origin: center;
-       position: relative;
-       background: #FFB6C1;
-       margin: 100px auto;
-    }
-    .heart::before, .heart::after{
-       content: '';
-       position: absolute;
-       width: 100px;
-       height: 100px;
-       border-radius: 50%;
-       background: #FFB6C1;
-    }
-    .heart::before{
-       left: -50px;
-    }
-    .heart::after{
-       top: -50px;
-    }
+      body {
+         font-family: Arial, sans-serif;
+         background: #f7f7f7;
+         margin: 0;
+         padding: 0;
+      }
+
+      .container {
+         max-width: 900px;
+         margin: 40px auto;
+         background: #fff;
+         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+         border-radius: 10px;
+         padding: 24px 16px 16px 16px;
+      }
+
+      h1 {
+         text-align: center;
+         color: #333;
+         margin-bottom: 24px;
+      }
+
+      .pdf-viewer {
+         width: 100%;
+         height: 80vh;
+         border: none;
+         border-radius: 8px;
+         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      }
+
+      .fallback {
+         text-align: center;
+         margin-top: 20px;
+      }
+
+      .fallback a {
+         color: #0074d9;
+         text-decoration: underline;
+      }
+
+      /* Easter egg heart styles */
+      .easter-egg-btn {
+         position: fixed;
+         top: 18px;
+         right: 24px;
+         font-size: 28px;
+         background: none;
+         border: none;
+         cursor: pointer;
+         z-index: 1001;
+         opacity: 0.7;
+         transition: opacity 0.2s;
+      }
+
+      .easter-egg-btn:hover {
+         opacity: 1;
+      }
+
+      .heart-overlay {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background: rgba(0, 0, 0, 0.45);
+         z-index: 1002;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .heart-overlay.active {
+         display: flex;
+      }
+
+      .heart {
+         width: 100px;
+         height: 100px;
+         transform: rotate(45deg);
+         transform-origin: center;
+         position: relative;
+         background: #FFB6C1;
+         margin: 100px auto;
+      }
+
+      .heart::before,
+      .heart::after {
+         content: '';
+         position: absolute;
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         background: #FFB6C1;
+      }
+
+      .heart::before {
+         left: -50px;
+      }
+
+      .heart::after {
+         top: -50px;
+      }
+
+      .close-heart {
+         position: absolute;
+         top: 24px;
+         right: 32px;
+         font-size: 32px;
+         color: #fff;
+         background: none;
+         border: none;
+         cursor: pointer;
+         z-index: 1003;
+      }
    </style>
 </head>
+
 <body>
-	<h2><center>Сднем святого валентина!!!!!</center></h2>
-    <div class="heart"></div>
+   <button class="easter-egg-btn" title="Valentine's surprise" aria-label="Show heart"
+      onclick="document.querySelector('.heart-overlay').classList.add('active')">❤️</button>
+   <div class="heart-overlay" onclick="this.classList.remove('active')">
+      <button class="close-heart" title="Close" aria-label="Close"
+         onclick="event.stopPropagation(); this.parentElement.classList.remove('active')">&times;</button>
+      <h2 style="text-align: center; color: #FFB6C1; position: fixed; top: 24px;">Сднем святого валентина!!!!!</h2> <br>
+      <h2 style="text-align: center; color: #FFB6C1; position: fixed; top: 48px;">(наверное)</h2> <br>
+      <div class="heart"></div>
+   </div>
+   <div class="container">
+      <h1>Daniil Fedorov — CV</h1>
+      <iframe class="pdf-viewer" src="Daniil Fedorov CV.pdf"></iframe>
+      <div class="fallback">
+         <p>If the PDF is not displayed, <a href="Daniil Fedorov CV.pdf" target="_blank">click here to download or view
+               the CV</a>.</p>
+      </div>
+   </div>
 </body>
+
 </html>
