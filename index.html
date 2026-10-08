@@ -46,24 +46,35 @@
          text-decoration: underline;
       }
 
-      /* Easter egg heart styles */
-      .easter-egg-btn {
+      /* ---------- Кнопки в углу ---------- */
+      .corner-btn {
          position: fixed;
          top: 18px;
-         right: 24px;
          font-size: 28px;
+         line-height: 1;
          background: none;
          border: none;
          cursor: pointer;
          z-index: 1001;
          opacity: 0.7;
-         transition: opacity 0.2s;
+         transition: opacity 0.2s, transform 0.2s;
       }
 
-      .easter-egg-btn:hover {
+      .corner-btn:hover {
          opacity: 1;
+         transform: scale(1.12);
       }
 
+      .easter-egg-btn {
+         right: 24px;
+      }
+
+      .tea-btn {
+         right: 74px;
+         font-size: 30px;
+      }
+
+      /* ---------- Easter egg: сердце ---------- */
       .heart-overlay {
          display: none;
          position: fixed;
@@ -120,12 +131,199 @@
          cursor: pointer;
          z-index: 1003;
       }
+
+      /* ---------- Чайная сцена ---------- */
+      .tea-overlay {
+         display: none;
+         position: fixed;
+         inset: 0;
+         z-index: 1010;
+         background:
+            radial-gradient(circle at 50% 35%, #55402f 0%, #2a1d16 55%, #150e0a 100%);
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+         overflow: hidden;
+         -webkit-tap-highlight-color: transparent;
+      }
+
+      .tea-overlay.active {
+         display: flex;
+      }
+
+      .tea-overlay::after {
+         /* мягкая виньетка */
+         content: '';
+         position: absolute;
+         inset: 0;
+         pointer-events: none;
+         background: radial-gradient(circle at 50% 45%, transparent 45%, rgba(0, 0, 0, 0.55) 100%);
+      }
+
+      .tea-scene {
+         position: relative;
+         z-index: 2;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 24px 16px;
+         max-height: 100%;
+         animation: sceneIn 0.5s cubic-bezier(.2, .8, .3, 1);
+      }
+
+      @keyframes sceneIn {
+         from {
+            opacity: 0;
+            transform: translateY(24px) scale(0.95);
+         }
+
+         to {
+            opacity: 1;
+            transform: none;
+         }
+      }
+
+      .tea-cup {
+         width: clamp(130px, 24vw, 200px);
+         height: auto;
+         display: block;
+         filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.45));
+      }
+
+      .cup-body {
+         fill: #f8f2e7;
+      }
+
+      .cup-handle {
+         fill: none;
+         stroke: #f8f2e7;
+         stroke-width: 11;
+         stroke-linecap: round;
+      }
+
+      .tea-liquid {
+         fill: #b07a4c;
+      }
+
+      .saucer {
+         fill: #e6dac6;
+      }
+
+      .steam {
+         fill: none;
+         stroke: rgba(255, 255, 255, 0.55);
+         stroke-width: 3;
+         stroke-linecap: round;
+         animation: steam 3.6s ease-in-out infinite;
+      }
+
+      @keyframes steam {
+         0% {
+            opacity: 0;
+            transform: translateY(6px) scaleX(1);
+         }
+
+         35% {
+            opacity: 0.65;
+         }
+
+         100% {
+            opacity: 0;
+            transform: translateY(-22px) scaleX(1.35);
+         }
+      }
+
+      .tea-string {
+         width: 2px;
+         height: 34px;
+         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.25));
+         border-radius: 2px;
+      }
+
+      .tea-tag {
+         position: relative;
+         padding: 10px 10px 12px;
+         background: #fdf7ea;
+         border-radius: 8px;
+         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.35) inset;
+         transform: rotate(-1.5deg);
+         max-width: min(460px, 84vw);
+      }
+
+      .tea-tag::before {
+         /* дырочка, через которую продета верёвочка */
+         content: '';
+         position: absolute;
+         top: 5px;
+         left: 50%;
+         width: 7px;
+         height: 7px;
+         margin-left: -3.5px;
+         border-radius: 50%;
+         background: #d9cdb6;
+         box-shadow: 0 0 0 2px #fdf7ea;
+      }
+
+      .tea-tag.pop {
+         animation: tagIn 0.45s cubic-bezier(.2, .8, .3, 1);
+      }
+
+      @keyframes tagIn {
+         from {
+            opacity: 0;
+            transform: rotate(-1.5deg) translateY(18px) scale(0.92);
+         }
+
+         to {
+            opacity: 1;
+            transform: rotate(-1.5deg) translateY(0) scale(1);
+         }
+      }
+
+      .tea-tag img {
+         display: block;
+         margin-top: 6px;
+         max-width: 100%;
+         max-height: 42vh;
+         border-radius: 4px;
+         background: #fff;
+      }
+
+      .tea-hint {
+         margin-top: 20px;
+         color: rgba(255, 235, 215, 0.55);
+         font-size: 14px;
+         letter-spacing: 0.04em;
+         text-align: center;
+         user-select: none;
+      }
+
+      .close-tea {
+         position: absolute;
+         top: 18px;
+         right: 26px;
+         font-size: 34px;
+         line-height: 1;
+         color: rgba(255, 240, 225, 0.8);
+         background: none;
+         border: none;
+         cursor: pointer;
+         z-index: 1012;
+         transition: color 0.2s, transform 0.2s;
+      }
+
+      .close-tea:hover {
+         color: #fff;
+         transform: scale(1.1);
+      }
    </style>
 </head>
 
 <body>
-   <button class="easter-egg-btn" title="Valentine's surprise" aria-label="Show heart"
+   <!-- Easter egg: сердце -->
+   <button class="corner-btn easter-egg-btn" title="Valentine's surprise" aria-label="Show heart"
       onclick="document.querySelector('.heart-overlay').classList.add('active')">❤️</button>
+
    <div class="heart-overlay" onclick="this.classList.remove('active')">
       <button class="close-heart" title="Close" aria-label="Close"
          onclick="event.stopPropagation(); this.parentElement.classList.remove('active')">&times;</button>
@@ -133,6 +331,42 @@
       <h2 style="text-align: center; color: #FFB6C1; position: fixed; top: 48px;">(наверное)</h2> <br>
       <div class="heart"></div>
    </div>
+
+   <!-- Кнопка-чашка -->
+   <button class="corner-btn tea-btn" id="teaBtn" title="Чашечка чая" aria-label="Открыть чашку чая">☕</button>
+
+   <!-- Чайная сцена -->
+   <div class="tea-overlay" id="teaOverlay">
+      <button class="close-tea" id="closeTea" title="Закрыть" aria-label="Закрыть">&times;</button>
+
+      <div class="tea-scene">
+         <svg class="tea-cup" viewBox="0 0 220 160" aria-hidden="true">
+            <!-- пар -->
+            <g>
+               <path class="steam" style="animation-delay:0s" d="M85 45 C 78 32, 92 24, 85 8" />
+               <path class="steam" style="animation-delay:1.2s" d="M110 45 C 103 30, 117 22, 110 4" />
+               <path class="steam" style="animation-delay:2.4s" d="M135 45 C 128 32, 142 24, 135 8" />
+            </g>
+            <!-- ручка -->
+            <path class="cup-handle" d="M163 74 C 202 74, 202 112, 160 112" />
+            <!-- блюдце -->
+            <ellipse class="saucer" cx="110" cy="142" rx="82" ry="9" />
+            <!-- корпус чашки -->
+            <path class="cup-body" d="M45 60 H 175 L 160 125 Q 110 140 60 125 Z" />
+            <!-- чай -->
+            <ellipse class="tea-liquid" cx="110" cy="60" rx="65" ry="10" />
+         </svg>
+
+         <div class="tea-string"></div>
+
+         <div class="tea-tag" id="teaTag">
+            <img id="teaImage" alt="Этикетка от чайного пакетика" draggable="false">
+         </div>
+
+         <div class="tea-hint">нажми, чтобы перевернуть этикетку 🍃</div>
+      </div>
+   </div>
+
    <div class="container">
       <h1>Daniil Fedorov — CV</h1>
       <iframe class="pdf-viewer" src="Daniil Fedorov CV.pdf"></iframe>
@@ -141,6 +375,77 @@
                the CV</a>.</p>
       </div>
    </div>
+
+   <script>
+      /* ================== Чайные этикетки ================== */
+      const DARLING_COUNT = 18;
+      const DARLING_PATH = 'darling/My_darling';   // + N + '.jpg'
+
+      const overlay = document.getElementById('teaOverlay');
+      const teaBtn = document.getElementById('teaBtn');
+      const closeBtn = document.getElementById('closeTea');
+      const img = document.getElementById('teaImage');
+      const tag = document.getElementById('teaTag');
+
+      let lastIndex = -1;
+
+      /* случайный номер, не совпадающий с предыдущим */
+      function randomIndex() {
+         if (DARLING_COUNT <= 1) return 1;
+         let i;
+         do {
+            i = Math.floor(Math.random() * DARLING_COUNT) + 1;
+         } while (i === lastIndex);
+         lastIndex = i;
+         return i;
+      }
+
+      function showRandomTea() {
+         const i = randomIndex();
+         img.src = DARLING_PATH + i + '.jpg';
+
+         // перезапуск анимации появления этикетки
+         tag.classList.remove('pop');
+         void tag.offsetWidth;
+         tag.classList.add('pop');
+      }
+
+      function openTea(e) {
+         if (e) e.stopPropagation();
+         overlay.classList.add('active');
+         showRandomTea();
+      }
+
+      function closeTea(e) {
+         if (e) e.stopPropagation();
+         overlay.classList.remove('active');
+      }
+
+      // кнопка-чашка
+      teaBtn.addEventListener('click', openTea);
+
+      // клик по любому месту сцены -> новая этикетка
+      overlay.addEventListener('click', showRandomTea);
+
+      // крестик не должен менять картинку
+      closeBtn.addEventListener('click', closeTea);
+
+      // Esc закрывает
+      document.addEventListener('keydown', function (e) {
+         if (e.key === 'Escape') {
+            overlay.classList.remove('active');
+            document.querySelector('.heart-overlay').classList.remove('active');
+         }
+      });
+
+      // аккуратно подгружаем картинки заранее (по желанию)
+      window.addEventListener('load', function () {
+         for (let i = 1; i <= DARLING_COUNT; i++) {
+            const pre = new Image();
+            pre.src = DARLING_PATH + i + '.jpg';
+         }
+      });
+   </script>
 </body>
 
 </html>
