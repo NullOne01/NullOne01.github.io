@@ -1,0 +1,116 @@
+# Tailored from reactive_resume.json; hidden sections omitted. RenderCV 2.8.
+cv:
+  name: Daniil Fedorov
+  location: Moscow, Russia
+  email: adviventes@gmail.com
+  phone: '+79208399312'
+  headline: Unity Gameplay Programmer
+  sections:
+    summary:
+      - Game programmer fluent in C# and C++, with experience in Unity WebGL, animation-driven gameplay, 
+        locomotion, and AI. Co-founded UwU Novels, raised $19K+ in funding, and built its Unity visual novel engine, growing the 
+        platform to 500+ registered users.
+    technical_skills:
+      - label: Unity & C#
+        details: Unity, WebGL, C#, Zenject, UniTask, UniRx, DOTween, NUnit
+      - label: Gameplay
+        details: Locomotion, animation, inverse kinematics, AI, pathfinding, obstacle avoidance
+      - label: Architecture & tools
+        details: MVVM, ECS, DDD, TDD; Git, GitHub, Jenkins, GitHub Actions, Jira, Figma
+      - label: Additional technologies
+        details: C++, ImGui, OpenGL, CMake; Yandex.Cloud, S3, OAuth, serverless
+    experience:
+      - company: Compulsory Military Service
+        position: Conscript
+        start_date: 2025-11
+        end_date: 2026-11
+      - company: Eagle Dynamics
+        position: Engine Programmer
+        location: Moscow, Russia
+        start_date: 2024-04
+        end_date: 2025-11
+        highlights:
+          - Maintained animation-based NPC locomotion in a proprietary C++ simulator engine.
+          - Implemented inverse kinematics (IK), AI decision-making, pathfinding, and obstacle avoidance.
+          - Created an AI testing submodule and debugging tools for development and validation.
+      - company: UwU Novels
+        position: Co-Founder & Lead Engine Programmer
+        location: Moscow, Russia
+        start_date: 2024-04
+        end_date: 2025-07
+        highlights:
+          - Led 3-5 developers building a no-code visual novel platform; built its Unity WebGL engine with 
+            MVVM, UniTask, UniRx, and DOTween.
+          - Integrated Yandex.Cloud S3, OAuth, and serverless services with a React.js frontend.
+          - Set up Jenkins builds and GitHub Actions for cloud microservices.
+          - Raised $19K+ in funding and reached 500+ registered users; hosted a game jam with 100 participants
+            and 30 published visual novels.
+      - company: Saber Interactive
+        position: Junior Gameplay Programmer
+        location: Remote
+        start_date: 2023-04
+        end_date: 2024-04
+        highlights:
+          - Implemented animation-driven gameplay and locomotion for a first-person title using an in-house 
+            engine and proprietary scripting language.
+          - Developed parkour and interactive props, including doors, buttons, and ledges; collaborated with 
+            QA and animators to refine motion flow.
+          - Fixed a critical animation bug in the C++ engine core and wrote gameplay/animation integration 
+            tests.
+      - company: Yandex
+        position: C++ Backend Programmer
+        location: Moscow, Russia
+        start_date: 2021-11
+        end_date: 2022-04
+        highlights:
+          - Maintained and extended a high-load C++ ads backend; wrote Python tests and SQL validation 
+            queries, and configured and monitored A/B tests.
+    education:
+      - institution: Higher School of Economics
+        area: System and Software Engineering
+        degree: MEng
+        start_date: 2024-09
+        end_date: 2027-06
+      - institution: Higher School of Economics
+        area: Software Engineering
+        degree: Bachelor
+        start_date: 2020-09
+        end_date: 2024-07
+    languages:
+      - label: Languages
+        details: English (B2); Russian (native); Belarusian (native)
+    certifications:
+      - TOEFL iBT 91/120 (Mar 2024)
+design:
+  theme: engineeringclassic
+  page:
+    size: a4
+    top_margin: 1.4cm
+    bottom_margin: 1.4cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_family: Source Sans 3
+    font_size:
+      body: 10pt
+      name: 25pt
+      headline: 12pt
+      connections: 9pt
+      section_titles: 12pt
+    line_spacing: 0.45em
+    alignment: left
+  header:
+    space_below_name: 0.15cm
+    space_below_headline: 0.2cm
+    space_below_connections: 0.3cm
+    connections:
+      show_icons: false
+      phone_number_format: international
+  sections:
+    space_between_regular_entries: 0.75em
+  entries:
+    highlights:
+      space_between_items: 0.08cm
+      space_above: 0.1cm

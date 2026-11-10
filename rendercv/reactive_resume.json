@@ -1,0 +1,572 @@
+{
+  "picture": {
+    "hidden": false,
+    "fit": "cover",
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Daniil Fedorov",
+    "headline": "",
+    "email": "adviventes@gmail.com",
+    "phone": "+79208399312",
+    "location": "Moscow, Russia",
+    "website": {
+      "url": "",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "icon": "",
+    "columns": 1,
+    "hidden": false,
+    "showHeading": true,
+    "keepTogether": false,
+    "startOnNewPage": false,
+    "content": "<ul><li><p>Software Developer with<strong> 2.5+ years</strong> in game tech; fluent in <strong>C++,</strong> <strong>C#</strong></p></li><li><p>Specialized in <strong>locomotion</strong>, <strong>gameplay</strong>, <strong>animation</strong>, <strong>AI</strong> <strong>systems</strong>; experienced with <strong>Unity</strong> and <strong>proprietary C++ game engines</strong></p></li><li><p>Co-founded UwU Novels: created a Unity WebGL visual-novel engine, integrated cloud microservices, raised <strong>$19k</strong> seed funding, and grew the platform to <strong>500+ users</strong></p></li><li><p>Currently learning <strong>machine learning</strong>, <strong>real-time graphics</strong>, <strong>GPGPU</strong> programming</p></li></ul>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "experience": {
+      "title": "Experience",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "tihgfo9znoob3gekcblxacyv",
+          "hidden": false,
+          "company": "Eagle Dynamics",
+          "position": "Engine Programmer",
+          "location": "Moscow, Russia",
+          "period": "Apr 2024 – Present",
+          "dates": {
+            "start": "2024-04",
+            "end": null,
+            "present": true
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li><p>Maintained the animation-based locomotion system for NPCs in the simulator’s custom engine.</p></li><li><p>Implemented IK algorithms and developed AI systems including decision-making, pathfinding, and obstacle avoidance.</p></li><li><p>Created a dedicated testing submodule and debugging tools for AI development and validation</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "bs2cy8vu99tllo0h160rmpy7",
+          "hidden": false,
+          "company": "UwU Novels",
+          "position": "Co-Founder & Lead Engine Programmer",
+          "location": "Moscow, Russia",
+          "period": "Apr 2024 – Jul 2025",
+          "dates": {
+            "start": "2024-04",
+            "end": "2025-07",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li><p>Leading development of a no-code visual novel platform with a team of 3–5 developers</p></li><li><p>Built a custom Unity WebGL game engine using MVVM architecture; worked extensively with UniTask, UniRx, DOTween</p></li><li><p>Integrated with Yandex.Cloud services (S3, OAuth, serverless) and frontend (React.js)</p></li><li><p>Set up CI/CD with Jenkins (local builds) and GitHub Actions (cloud microservices)</p></li><li><p>Raised $19K+ in funding and reached 500+ registered users</p></li><li><p>Hosted our own game jam with 100 participants and 30 published visual novels</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "djn4pbhr804lfrsjsx99kkkm",
+          "hidden": false,
+          "company": "Saber Interactive",
+          "position": "Junior Gameplay Programmer",
+          "location": "Remote",
+          "period": "Apr 2023 – Apr 2024",
+          "dates": {
+            "start": "2023-04",
+            "end": "2024-04",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li><p>Worked on a first-person title using an in-house game engine and a proprietary scripting language to implement animation-driven gameplay and locomotion</p></li><li><p>Developed a parkour module and animation-driven interactive props (doors, buttons, ledges)</p></li><li><p>Fixed a critical animation bug deep in the engine core (C++)</p></li><li><p>Wrote integration tests to validate complex animation/gameplay logic</p></li><li><p>Collaborated closely with QA and animators to polish motion flow and ensure smooth, immersive gameplay</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "nsg0i5dkj70eruje7cajld30",
+          "hidden": false,
+          "company": "Yandex",
+          "position": "C++ Backend Programmer",
+          "location": "Moscow, Russia",
+          "period": "Nov 2021 – Apr 2022",
+          "dates": {
+            "start": "2021-11",
+            "end": "2022-04",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li><p>Maintained and extended a high-load C++ backend for the ads engine</p></li><li><p>Wrote unit tests in Python and SQL queries to validate test results and data integrity</p></li><li><p>Configured and monitored A/B tests to evaluate feature impact</p></li></ul>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "e6kp74kd6t5pq60jpvyzsp0q",
+          "hidden": false,
+          "school": "Higher School of Economics",
+          "degree": "Master of Engineering - MEng",
+          "area": "System and Software Engineering",
+          "grade": "",
+          "location": "",
+          "period": "Sep 2024 – Jun 2026",
+          "dates": {
+            "start": "2024-09",
+            "end": "2026-06",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p></p>"
+        },
+        {
+          "id": "ucxfh6vr5fxh54mq787qmvu1",
+          "hidden": false,
+          "school": "Higher School Of Economics",
+          "degree": "Bachelor",
+          "area": "Software Engineering",
+          "grade": "",
+          "location": "",
+          "period": "Sep 2020 – Jul 2024",
+          "dates": {
+            "start": "2020-09",
+            "end": "2024-07",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p></p>"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "icon": "",
+      "columns": 1,
+      "hidden": true,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "aacqzqim63onij6ue384u8lz",
+          "hidden": false,
+          "name": "Learn to survive",
+          "period": "Apr 2018 – Apr 2018",
+          "dates": {
+            "start": "2018-04",
+            "end": "2018-04",
+            "present": false
+          },
+          "website": {
+            "url": "https://play.google.com/store/apps/details?id=com.nullone.realsurvival",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "nrbirjhn18hck3qaaksso40v",
+          "hidden": false,
+          "name": "Lesser evil",
+          "period": "Jan 2021 – Jan 2021",
+          "dates": {
+            "start": "2021-01",
+            "end": "2021-01",
+            "present": false
+          },
+          "website": {
+            "url": "https://nullone.itch.io/lesser-evil",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "it7jy2e5sfuj4yqq1b0e60pq",
+          "hidden": false,
+          "name": "The Mage's Path",
+          "period": "Feb 2020 – Feb 2020",
+          "dates": {
+            "start": "2020-02",
+            "end": "2020-02",
+            "present": false
+          },
+          "website": {
+            "url": "https://play.google.com/store/apps/details?id=com.nullone.magespath",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "djqh152ggcty8kpzn9y8t6m1",
+          "hidden": false,
+          "name": "Milky Engineers",
+          "period": "Feb 2020 – Feb 2020",
+          "dates": {
+            "start": "2020-02",
+            "end": "2020-02",
+            "present": false
+          },
+          "website": {
+            "url": "https://globalgamejam.org/2020/games/milky-engineers-8",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "p2q2t65qgowvoj24bck3mnef",
+          "hidden": false,
+          "name": "UwU Novels | Place where stories are born",
+          "period": "Sep 2023 -",
+          "dates": {
+            "start": null,
+            "end": null,
+            "present": false,
+            "raw": "Sep 2023 -"
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "icon": "",
+      "columns": 2,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "l0n0ibgh8oachwtelqv3gvu6",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "C++",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "ImGUI",
+            "OpenGL",
+            "CMake"
+          ]
+        },
+        {
+          "id": "p7n9fnwa290h4bnvq8fk2wyx",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "C#",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "NUnit"
+          ]
+        },
+        {
+          "id": "byw6b4qxhgut77pywa0pn8yh",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Unity",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Zenject",
+            "UniTask",
+            "UniRX",
+            "DOTween"
+          ]
+        },
+        {
+          "id": "jy4y8pymwwp7qsozqu8fvc47",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Architecture",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "DDD",
+            "TDD",
+            "ECS",
+            "MVVM"
+          ]
+        },
+        {
+          "id": "j638hazhb7ezn9hw3wvvl0g0",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Tools",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Figma",
+            "Jira",
+            "Git",
+            "GitHub"
+          ]
+        },
+        {
+          "id": "yfn5v79zhbqrh8r77rjkad1s",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Microservices",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Yandex.Cloud",
+            "S3",
+            "Serverless",
+            "Auth"
+          ]
+        }
+      ],
+      "keywordLayout": "inline",
+      "layout": "default"
+    },
+    "languages": {
+      "title": "Languages",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "wecdp9d1a651vth1sbf67ek1",
+          "hidden": false,
+          "language": "English",
+          "fluency": "B2",
+          "level": 0
+        },
+        {
+          "id": "v44pt40sqlplbcmtgliyop9r",
+          "hidden": false,
+          "language": "Russian",
+          "fluency": "Native",
+          "level": 0
+        },
+        {
+          "id": "hlm4r06h23o6sbg3ql7thwam",
+          "hidden": false,
+          "language": "Belarusian",
+          "fluency": "Native",
+          "level": 0
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "ti5a864bwi5eo1o5w1zni3dq",
+          "hidden": false,
+          "title": "TOEFL IBT 91/120",
+          "issuer": "",
+          "date": "Mar 2024",
+          "dates": {
+            "start": "2024-03",
+            "end": null,
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>English </p>"
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "bronzor",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "profiles",
+            "experience",
+            "education",
+            "projects",
+            "volunteer",
+            "references"
+          ],
+          "sidebar": [
+            "skills",
+            "interests",
+            "certifications",
+            "awards",
+            "publications",
+            "languages"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 20,
+      "marginY": 20,
+      "format": "a4",
+      "locale": "en-US",
+      "dateFormat": "short",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": true
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(220, 38, 38, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400"
+        ],
+        "fontSize": 9,
+        "lineHeight": 1
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 12,
+        "lineHeight": 1
+      }
+    },
+    "notes": "",
+    "styleRules": []
+  }
+}
