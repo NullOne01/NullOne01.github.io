@@ -2,94 +2,122 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Daniil Fedorov — C++ Engine Programmer CV</title>
-   <style>
-      body {
-         font-family: Arial, sans-serif;
-         background: #f7f7f7;
-         margin: 0;
-         padding: 0;
-      }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daniil Fedorov — C++ Engine Programmer CV</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
+        integrity="sha512-Pmhg2i/F7+5+7SsdoUqKeH7UAZoVMYb1sxGOoJ0jWXAEHP0XV2H4CITyK267eHWp2jpj7rtqWNkmEOw1tNyYpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.css" integrity="sha384-PDbUeNCuE6bOPudPOgFyIUEy3UJawJVwr3XlGO90FIuf5qNIoTLSgOJo/dC2ZXV/" crossorigin="anonymous">
 
-      .container {
-         max-width: 900px;
-         margin: 40px auto;
-         background: #fff;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-         border-radius: 10px;
-         padding: 24px 16px 16px 16px;
-      }
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.js" integrity="sha384-VkqWq8xtm5YQk1BBXczQ8/Sx+DlCzF8cuS43bZwmtVXzRFtyLTqTCdP7MKmKo+KN" crossorigin="anonymous"></script>
 
-      h1 {
-         text-align: center;
-         color: #333;
-         margin-bottom: 16px;
-      }
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [{ left: '$$',  right: '$$',  display: false }]});"></script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
 
-      .btn-row {
-         text-align: center;
-         margin-bottom: 20px;
-      }
-
-      .btn {
-         display: inline-block;
-         background: #0074d9;
-         color: #fff;
-         text-decoration: none;
-         font-size: 15px;
-         padding: 10px 20px;
-         border-radius: 6px;
-         transition: background 0.2s;
-      }
-
-      .btn:hover {
-         background: #005bb5;
-      }
-
-      .back-link {
-         display: inline-block;
-         margin-bottom: 16px;
-         color: #0074d9;
-         text-decoration: underline;
-      }
-
-      .pdf-viewer {
-         width: 100%;
-         height: 80vh;
-         border: none;
-         border-radius: 8px;
-         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-      }
-
-      .fallback {
-         text-align: center;
-         margin-top: 20px;
-      }
-
-      .fallback a {
-         color: #0074d9;
-         text-decoration: underline;
-      }
-   </style>
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-   <div class="container">
-      <h1>Daniil Fedorov — C++ Engine Programmer CV</h1>
-      <div class="btn-row">
-         <a class="btn" href="output/pdf/cpp_engine_programmer.pdf" download="Daniil_Fedorov_Cpp_Engine_Programmer.pdf">
-            Download PDF
-         </a>
-      </div>
-      <p style="text-align:center;"><a class="back-link" href="index.html">← Back to homepage</a></p>
-      <iframe class="pdf-viewer" src="output/pdf/cpp_engine_programmer.pdf"></iframe>
-      <div class="fallback">
-         <p>If the PDF is not displayed, <a href="output/pdf/cpp_engine_programmer.pdf" target="_blank">click here to download or view
-               the CV</a>.</p>
-      </div>
-   </div>
+    <div style="text-align:center; margin: 20px 0 0;">
+        <a href="output/pdf/cpp_engine_programmer.pdf" download="Daniil_Fedorov_Cpp_Engine_Programmer.pdf"
+           style="display:inline-block; background:#0074d9; color:#fff; text-decoration:none; font-size:15px; padding:10px 20px; border-radius:6px;">
+           Download PDF
+        </a>
+    </div>
+    <article class="markdown-body">
+        <h1>Daniil Fedorov's CV</h1>
+        <ul>
+        <li>Phone: +7 920 839 93 12</li>
+        <li>Email: <a href="mailto:adviventes@gmail.com">adviventes@gmail.com</a></li>
+        <li>Location: Moscow, Russia</li>
+        </ul>
+        <h1>Summary</h1>
+        <p>C++ programmer experienced in proprietary game engines, animation-based locomotion, inverse kinematics, and AI systems. Background in engine-core debugging, testing tools, and high-load C++ backend development; also built and led development of a Unity WebGL engine.</p>
+        <h1>Technical Skills</h1>
+        <p><strong>C++ &amp; engine systems:</strong> C++, CMake, ImGui, OpenGL; proprietary game engines</p>
+        <p><strong>Animation &amp; AI:</strong> Locomotion, inverse kinematics, decision-making, pathfinding, obstacle avoidance</p>
+        <p><strong>Testing &amp; architecture:</strong> Integration tests, Python unit tests, NUnit, TDD, DDD, ECS, MVVM</p>
+        <p><strong>Additional technologies:</strong> C#, Unity, UniTask, UniRx, DOTween, Zenject; SQL, Git, Jenkins, GitHub Actions</p>
+        <h1>Experience</h1>
+        <h2><strong>Conscript</strong>, Compulsory Military Service</h2>
+        <p>Nov 2025 – Nov 2026</p>
+        <h2><strong>Engine Programmer</strong>, Eagle Dynamics -- Moscow, Russia</h2>
+        <p>Apr 2024 – Nov 2025</p>
+        <ul>
+        <li>
+        <p>Maintained animation-based NPC locomotion in a proprietary C++ simulator engine.</p>
+        </li>
+        <li>
+        <p>Implemented inverse kinematics (IK) algorithms and AI decision-making, pathfinding, and obstacle avoidance.</p>
+        </li>
+        <li>
+        <p>Created a dedicated AI testing submodule and debugging tools for development and validation.</p>
+        </li>
+        </ul>
+        <h2><strong>Co-Founder &amp; Lead Engine Programmer</strong>, UwU Novels -- Moscow, Russia</h2>
+        <p>Apr 2024 – July 2025</p>
+        <ul>
+        <li>
+        <p>Built a Unity WebGL visual novel engine using MVVM, UniTask, UniRx, and DOTween; led a team of 3-5 developers.</p>
+        </li>
+        <li>
+        <p>Integrated Yandex.Cloud S3, OAuth, and serverless services with React.js; set up Jenkins and GitHub Actions CI/CD.</p>
+        </li>
+        <li>
+        <p>Co-founded the platform, raised $19K+ in funding, and reached 500+ registered users.</p>
+        </li>
+        </ul>
+        <h2><strong>Junior Gameplay Programmer</strong>, Saber Interactive -- Remote</h2>
+        <p>Apr 2023 – Apr 2024</p>
+        <ul>
+        <li>
+        <p>Fixed a critical animation bug deep in the C++ engine core of a first-person title.</p>
+        </li>
+        <li>
+        <p>Implemented animation-driven locomotion, parkour, and interactive props using an in-house engine and proprietary scripting language.</p>
+        </li>
+        <li>
+        <p>Wrote integration tests for complex animation/gameplay logic and collaborated with QA and animators.</p>
+        </li>
+        </ul>
+        <h2><strong>C++ Backend Programmer</strong>, Yandex -- Moscow, Russia</h2>
+        <p>Nov 2021 – Apr 2022</p>
+        <ul>
+        <li>
+        <p>Maintained and extended a high-load C++ backend for the ads engine.</p>
+        </li>
+        <li>
+        <p>Wrote Python unit tests and SQL queries to validate results and data integrity; configured and monitored A/B tests.</p>
+        </li>
+        </ul>
+        <h1>Education</h1>
+        <h2><strong>Higher School of Economics</strong>, MEng in System and Software Engineering</h2>
+        <p>Sept 2024 – June 2027</p>
+        <h2><strong>Higher School of Economics</strong>, Bachelor in Software Engineering</h2>
+        <p>Sept 2020 – July 2024</p>
+        <h1>Languages</h1>
+        <p><strong>Languages:</strong> English (B2); Russian (native); Belarusian (native)</p>
+        <h1>Certifications</h1>
+        <p>TOEFL iBT 91/120 (Mar 2024)</p>
+    </article>
 </body>
 
 </html>
