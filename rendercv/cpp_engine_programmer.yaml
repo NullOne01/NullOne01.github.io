@@ -1,6 +1,7 @@
 # Tailored from reactive_resume.json; hidden sections omitted. RenderCV 2.8.
 cv:
   name: Daniil Fedorov
+  photo: ../photo/face1.jpg
   location: Moscow, Russia
   email: adviventes@gmail.com
   phone: '+79208399312'
