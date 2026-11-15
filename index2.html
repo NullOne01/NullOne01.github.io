@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Dan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #181c19;
+      color: #ede2ec;
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      min-width: 1280px;
+      overflow-x: auto;
+    }
+
+    /* Desktop frame: exact 1280px */
+    .desktop-frame {
+      width: 1280px;
+      position: relative;
+      background-color: #181c19;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding-bottom: 4px;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      width: 1280px;
+      height: 56px;
+      background-color: #181c19;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 85px;
+      overflow: clip;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 37px;
+      align-items: center;
+      font-size: 14px;
+      color: #c4baf6;
+      white-space: nowrap;
+    }
+
+    .nav-buttons a {
+      color: #c4baf6;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-buttons a:hover {
+      opacity: 0.8;
+    }
+
+    .btn-cv-container {
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-cv-bg {
+      background-color: #dfd7eb;
+      height: 36px;
+      width: 180px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s, background-color 0.15s;
+    }
+
+    .btn-cv-container:hover .btn-cv-bg {
+      background-color: #ede6f5;
+      transform: translateY(-1px);
+    }
+
+    .btn-cv-text {
+      color: #181c19;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    /* Main page / Hero */
+    .main-page {
+      position: relative;
+      width: 1276px;
+      height: 652px;
+      overflow: clip;
+      flex-shrink: 0;
+    }
+
+    .hero-name {
+      position: absolute;
+      left: 84px;
+      top: 286px;
+      font-size: 130px;
+      line-height: 96.35%;
+      font-weight: 700;
+      white-space: nowrap;
+      background-image: url('assets/daniil_fedorov.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text-1 {
+      position: absolute;
+      right: 435px;
+      top: 238px;
+      transform: translateX(100%);
+      width: 340px;
+      font-size: 16px;
+      color: #ede2ec;
+      line-height: normal;
+    }
+
+    .hero-text-2 {
+      position: absolute;
+      right: 435px;
+      top: 323px;
+      transform: translateX(100%);
+      width: 340px;
+      font-size: 16px;
+      color: #ede2ec;
+      line-height: normal;
+    }
+
+    .hero-text-3 {
+      position: absolute;
+      right: 435px;
+      top: 432px;
+      transform: translateX(100%);
+      width: 339px;
+      font-size: 16px;
+      color: #ede2ec;
+      line-height: normal;
+    }
+
+    .hero-text-4 {
+      position: absolute;
+      right: 435px;
+      top: 549px;
+      transform: translateX(100%);
+      width: 339px;
+      height: 38px;
+      font-size: 16px;
+      color: #f5f5f5;
+      line-height: normal;
+    }
+
+    /* Skills */
+    .skills {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      flex: 1 0 0;
+      overflow: clip;
+      padding-top: 153px;
+      padding-bottom: 122px;
+      padding-left: 108px;
+      padding-right: 488px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 80px;
+    }
+
+    .skills-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .skills-title {
+      position: relative;
+      font-size: 20px;
+      color: #ede2ec;
+      white-space: nowrap;
+      z-index: 1;
+    }
+
+    .skills-grid {
+      position: relative;
+      z-index: 1;
+      display: inline-grid;
+      grid-template-columns: max-content;
+      grid-rows: max-content;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .skill-item {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+      color: #ede2ec;
+    }
+
+    /* Experience */
+    .experience {
+      position: relative;
+      width: 1180px;
+      padding: 66px 35px 66px 54px;
+      display: flex;
+      align-items: flex-start;
+      gap: 289px;
+      overflow: clip;
+      flex-shrink: 0;
+    }
+
+    .experience-title {
+      font-size: 20px;
+      color: #ede2ec;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .experience-block {
+      flex: 1 0 0;
+      min-width: 1px;
+      border-left: 1px solid #c4baf6;
+      border-right: 1px solid #c4baf6;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+      align-items: flex-start;
+      font-size: 16px;
+    }
+
+    .exp-entry {
+      position: relative;
+      display: inline-grid;
+      grid-template-columns: max-content;
+      grid-rows: max-content;
+      align-items: start;
+      flex-shrink: 0;
+    }
+
+    .exp-entry-col {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+    }
+
+    .exp-name-role {
+      width: 280px;
+      color: #c4baf6;
+      line-height: normal;
+    }
+
+    .exp-role-title {
+      color: #ede2ec;
+    }
+
+    .exp-date-loc {
+      color: #ede2ec;
+      text-align: right;
+      line-height: normal;
+    }
+
+    .exp-list {
+      list-style-type: disc;
+      color: #ede2ec;
+      width: 633px;
+      padding-left: 24px;
+      line-height: normal;
+    }
+
+    .exp-list li {
+      margin-bottom: 4px;
+    }
+
+    .exp-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Education */
+    .education {
+      position: relative;
+      width: 1278px;
+      height: 715px;
+      overflow: clip;
+      flex-shrink: 0;
+    }
+
+    .education-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .education-content {
+      position: absolute;
+      left: 639px;
+      top: 61px;
+      white-space: nowrap;
+      font-size: 16px;
+      color: #ede2ec;
+    }
+
+    .education-title-edu {
+      position: absolute;
+      right: 213px;
+      top: calc(50% - 296.5px);
+      transform: translateX(100%);
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    .education-title-cert {
+      position: absolute;
+      right: 262px;
+      top: calc(50% + 37.5px);
+      transform: translateX(100%);
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    /* Contacts */
+    .contacts {
+      position: relative;
+      width: 1270px;
+      height: 502px;
+      overflow: clip;
+      flex-shrink: 0;
+    }
+
+    .contacts-cta {
+      position: absolute;
+      left: 93px;
+      top: calc(50% - 178px);
+      font-size: 20px;
+      color: #c4baf6;
+      white-space: nowrap;
+    }
+
+    .contacts-line {
+      position: absolute;
+      left: 93px;
+      right: 88px;
+      top: 139px;
+      height: 0;
+    }
+
+    .contacts-arrows {
+      position: absolute;
+      left: 590px;
+      top: 243px;
+      width: 30px;
+      height: 100px;
+    }
+
+    .contacts-links {
+      position: absolute;
+      left: 632px;
+      top: 233px;
+      font-size: 16px;
+      color: #ede2ec;
+      white-space: nowrap;
+      line-height: normal;
+    }
+
+    .contacts-links a {
+      color: #ede2ec;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .contacts-links a:hover {
+      color: #c4baf6;
+    }
+
+    /* PDF Modal Viewer */
+    .pdf-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .pdf-modal.active {
+      display: flex;
+    }
+
+    .pdf-dialog {
+      background: #181c19;
+      border: 1px solid rgba(196, 186, 246, 0.25);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 1040px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .pdf-header {
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(196, 186, 246, 0.15);
+      background-color: #141715;
+    }
+
+    .pdf-tabs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pdf-tab-btn {
+      background: transparent;
+      border: 1px solid rgba(196, 186, 246, 0.25);
+      color: #ede2ec;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .pdf-tab-btn.active, .pdf-tab-btn:hover {
+      background: #c4baf6;
+      color: #181c19;
+      font-weight: 600;
+    }
+
+    .pdf-close {
+      background: transparent;
+      border: none;
+      color: #a39ca7;
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .pdf-close:hover {
+      color: #fff;
+    }
+
+    .pdf-frame {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Easter eggs */
+    .corner-btn {
+      position: fixed;
+      top: 14px;
+      font-size: 24px;
+      line-height: 1;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      opacity: 0.6;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .corner-btn:hover { opacity: 1; transform: scale(1.1); }
+    .easter-egg-btn { right: 18px; }
+    .tea-btn { right: 54px; }
+
+    .heart-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 1002;
+      justify-content: center;
+      align-items: center;
+    }
+    .heart-overlay.active { display: flex; }
+    .heart {
+      width: 100px;
+      height: 100px;
+      transform: rotate(45deg);
+      position: relative;
+      animation: heartbeat 1.2s infinite;
+    }
+    .heart::before, .heart::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: #e63946;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart::before { left: -50px; }
+    .heart::after { top: -50px; }
+    @keyframes heartbeat {
+      0%, 100% { transform: rotate(45deg) scale(1); }
+      50% { transform: rotate(45deg) scale(1.15); }
+    }
+
+    .tea-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1002;
+      justify-content: center;
+      align-items: center;
+    }
+    .tea-overlay.active { display: flex; }
+    .tea-scene {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .tea-close {
+      position: fixed;
+      top: 24px;
+      right: 28px;
+      background: none;
+      border: none;
+      font-size: 36px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .tea-tag img {
+      max-width: 280px;
+      max-height: 280px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .tea-hint {
+      color: rgba(255,255,255,0.7);
+      margin-top: 14px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Easter eggs -->
+  <button class="corner-btn tea-btn" id="teaBtn" title="Чашечка чая">🍵</button>
+  <button class="corner-btn easter-egg-btn" id="heartBtn" title="Секрет">❤️</button>
+
+  <div class="heart-overlay" id="heartOverlay">
+    <div class="heart"></div>
+  </div>
+
+  <div class="tea-overlay" id="teaOverlay">
+    <button class="tea-close" id="closeTea">&times;</button>
+    <div class="tea-scene">
+      <div class="tea-tag" id="teaTag">
+        <img id="teaImage" alt="Этикетка от чайного пакетика" draggable="false">
+      </div>
+      <div class="tea-hint">нажми, чтобы перевернуть этикетку 🍃</div>
+    </div>
+  </div>
+
+  <div class="desktop-frame">
+
+    <!-- Header (id: 1:4) -->
+    <header class="header">
+      <nav class="nav-buttons">
+        <a href="#main">MAIN</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#education">EDUCATION</a>
+      </nav>
+      <div class="btn-cv-container" id="openCvBtn">
+        <div class="btn-cv-bg">
+          <span class="btn-cv-text">GET MY CV FILE</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main page (id: 1:13) -->
+    <section class="main-page" id="main">
+      <h1 class="hero-name">
+        DANIIL<br>FEDOROV
+      </h1>
+      <div class="hero-text-1">
+        <p>Software Developer with 2.5+ years in game tech</p>
+        <p>Fluent in C++, C#</p>
+      </div>
+      <div class="hero-text-2">
+        <p>Specialized in locomotion, gameplay, animation, AI systems; experienced with Unity and proprietary</p>
+        <p>C++ game engines</p>
+      </div>
+      <div class="hero-text-3">
+        <p>Co-founded UwU Novels: created a Unity WebGL visual-novel engine, integrated cloud microservices, raised $19k seed funding, and grew the platform to 500+ users</p>
+      </div>
+      <div class="hero-text-4">
+        <p>Currently learning machine learning, real-time graphics, GPGPU programming</p>
+      </div>
+    </section>
+
+    <!-- Skills (id: 1:20) -->
+    <section class="skills" id="skills">
+      <img src="assets/skills.png" alt="" class="skills-bg">
+      <h2 class="skills-title">SKILLS</h2>
+      <div class="skills-grid">
+        <!-- C++ -->
+        <div class="skill-item" style="margin-left: 0; margin-top: 0;">
+          <p>C++</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>ImGUI, OpenGL, CMake</p>
+        </div>
+        <!-- C# -->
+        <div class="skill-item" style="margin-left: 428px; margin-top: 0;">
+          <p>C#</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>NUnit</p>
+        </div>
+        <!-- Unity -->
+        <div class="skill-item" style="margin-left: 0; margin-top: 99px; color: #f5f5f5;">
+          <p>Unity</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>Zenject, UniTask, UniRX, DOTween</p>
+        </div>
+        <!-- Architecture -->
+        <div class="skill-item" style="margin-left: 428px; margin-top: 99px;">
+          <p>Architecture</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>DDD, TDD, ECS, MVVM</p>
+        </div>
+        <!-- Tools -->
+        <div class="skill-item" style="margin-left: 0; margin-top: 198px;">
+          <p>Tools</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>Figma, Jira, Git, GitHub</p>
+        </div>
+        <!-- Microservices -->
+        <div class="skill-item" style="margin-left: 428px; margin-top: 198px;">
+          <p>Microservices</p>
+          <p>&ZeroWidthSpace;</p>
+          <p>Yandex.Cloud, S3, Serverless, Auth</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (id: 1:29) -->
+    <section class="experience" id="experience">
+      <h2 class="experience-title">EXPERIENCE</h2>
+      <div class="experience-block">
+
+        <!-- Eagle Dynamics (id: 1:32) -->
+        <div class="exp-entry">
+          <div class="exp-entry-col exp-name-role" style="margin-left: 1px; margin-top: 0; width: 180px;">
+            <p>Eagle Dynamics</p>
+            <p>&ZeroWidthSpace;</p>
+            <p class="exp-role-title">Engine Programmer</p>
+          </div>
+          <div class="exp-entry-col exp-date-loc" style="margin-left: 489px; margin-top: 99px; width: 144px;">
+            <p>Apr 2024 - Present</p>
+            <p>Moscow, Russia</p>
+          </div>
+          <ul class="exp-entry-col exp-list" style="margin-top: 169px;">
+            <li>Maintained the animation-based locomotion system for NPCs in the simulator’s custom engine.</li>
+            <li>Implemented IK algorithms and developed AI systems including decision-making, pathfinding, and obstacle avoidance.</li>
+            <li>Created a dedicated testing submodule and debugging tools for AI development and validation.</li>
+          </ul>
+        </div>
+
+        <!-- UwU Novels (id: 1:36) -->
+        <div class="exp-entry">
+          <div class="exp-entry-col exp-name-role" style="margin-left: 0; margin-top: 0; width: 280px;">
+            <p>UwU Novels</p>
+            <p>&ZeroWidthSpace;</p>
+            <p class="exp-role-title">Co-Founder &amp; Lead Engine Programmer</p>
+          </div>
+          <div class="exp-entry-col exp-date-loc" style="margin-left: 472px; margin-top: 64px; width: 160px;">
+            <p>Apr 2024 - July 2025</p>
+            <p>Moscow, Russia</p>
+          </div>
+          <ul class="exp-entry-col exp-list" style="margin-top: 148px;">
+            <li>Leading development of a no-code visual novel platform with a team of 3–5 developers.</li>
+            <li>Built a custom Unity WebGL game engine using MVVM architecture; worked extensively with UniTask, UniRx, DOTween.</li>
+            <li>Integrated with Yandex.Cloud services (S3, OAuth, serverless) and frontend (React.js).</li>
+            <li>Set up CI/CD with Jenkins (local builds) and GitHub Actions (cloud microservices).</li>
+            <li>Raised $19K+ in funding and reached 500+ registered users.</li>
+            <li>Hosted our own game jam with 100 participants and 30 published visual novels.</li>
+          </ul>
+        </div>
+
+        <!-- Saber Interactive (id: 1:40) -->
+        <div class="exp-entry">
+          <div class="exp-entry-col exp-name-role" style="margin-left: 0; margin-top: 0; width: 208px;">
+            <p>Saber Interactive</p>
+            <p>&ZeroWidthSpace;</p>
+            <p class="exp-role-title">Junior Gameplay Programmer</p>
+          </div>
+          <div class="exp-entry-col exp-date-loc" style="margin-left: 472px; margin-top: 66px; width: 161px;">
+            <p>Apr 2023 - Apr 2024</p>
+            <p>Remote</p>
+          </div>
+          <ul class="exp-entry-col exp-list" style="margin-top: 146px;">
+            <li>Worked on a first-person title using an in-house game engine and a proprietary scripting language to implement animation-driven gameplay and locomotion.</li>
+            <li>Developed a parkour module and animation-driven interactive props (doors, buttons, ledges).</li>
+            <li>Fixed a critical animation bug deep in the engine core (C++).</li>
+            <li>Wrote integration tests to validate complex animation/gameplay logic.</li>
+            <li>Collaborated closely with QA and animators to polish motion flow and ensure smooth, immersive gameplay.</li>
+          </ul>
+        </div>
+
+        <!-- Yandex (id: 1:44) -->
+        <div class="exp-entry">
+          <div class="exp-entry-col exp-name-role" style="margin-left: 0; margin-top: 0; width: 237px;">
+            <p>Yandex</p>
+            <p>&ZeroWidthSpace;</p>
+            <p class="exp-role-title">C++ Backend Programmer</p>
+          </div>
+          <div class="exp-entry-col exp-date-loc" style="margin-left: 434px; margin-top: 47px; width: 198px;">
+            <p>Nov 2021 - Apr 2022</p>
+            <p>Moscow, Russia</p>
+          </div>
+          <ul class="exp-entry-col exp-list" style="margin-top: 110px;">
+            <li>Maintained and extended a high-load C++ backend for the ads engine.</li>
+            <li>Wrote unit tests in Python and SQL queries to validate test results and data integrity.</li>
+            <li>Configured and monitored A/B tests to evaluate feature impact.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education (id: 1:48) -->
+    <section class="education" id="education">
+      <img src="assets/education.png" alt="" class="education-bg">
+      <h2 class="education-title-edu">EDUCATION</h2>
+      <h2 class="education-title-cert">CERTIFICATIONS</h2>
+
+      <div class="education-content">
+        <!-- HSE Master -->
+        <div style="position: absolute; left: 0; top: 103px;">
+          <p>Higher School of Economics</p>
+          <p>System and Software Engineering</p>
+        </div>
+        <div style="position: absolute; left: 517px; top: 103px; transform: translateX(-100%); text-align: right;">
+          <p>Sep 2024 - Jun 2026</p>
+          <p>Master of Engineering - MEng</p>
+        </div>
+
+        <!-- HSE Bachelor -->
+        <div style="position: absolute; left: 0; top: 219px;">
+          <p>Higher School Of Economics</p>
+          <p>Software Engineering</p>
+        </div>
+        <div style="position: absolute; left: 517px; top: 219px; transform: translateX(-100%); text-align: right;">
+          <p>Sep 2020 - Jul 2024</p>
+          <p>Bachelor</p>
+        </div>
+
+        <!-- TOEFL -->
+        <div style="position: absolute; left: 0; top: 439px;">
+          <p>TOEFL IBT 91/120</p>
+          <p>English</p>
+        </div>
+        <div style="position: absolute; left: 453px; top: 437px;">
+          <p>Mar 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts (id: 1:58) -->
+    <footer class="contacts">
+      <p class="contacts-cta">READY TO BUILD SOMETHING TOGETHER?</p>
+      
+      <!-- Line -->
+      <div class="contacts-line">
+        <img src="assets/line.svg" alt="" style="width: 100%; display: block;">
+      </div>
+
+      <!-- Arrows -->
+      <div class="contacts-arrows">
+        <img src="assets/arrows.svg" alt="" style="width: 100%; height: 100%; display: block;">
+      </div>
+
+      <!-- Links & info -->
+      <div class="contacts-links">
+        <p style="position: absolute; left: 0; top: 0;"><a href="mailto:adviventes@gmail.com">adviventes@gmail.com</a></p>
+        <p style="position: absolute; left: 407px; top: 1px;">Moscow, Russia</p>
+        <p style="position: absolute; left: 0; top: 34px;"><a href="https://github.com/NullOne01" target="_blank" rel="noopener">GitHub</a></p>
+        <p style="position: absolute; left: 407px; top: 35px;"><a href="tel:+79208399312">+79208399312</a></p>
+        <p style="position: absolute; left: 0; top: 68px;"><a href="https://linkedin.com/in/daniil-fedorov" target="_blank" rel="noopener">LinkedIn</a></p>
+        <p style="position: absolute; left: 0; top: 102px;"><a href="https://t.me/NullOne01" target="_blank" rel="noopener">Telegram</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- PDF Modal Viewer -->
+  <div class="pdf-modal" id="cvModal">
+    <div class="pdf-dialog">
+      <div class="pdf-header">
+        <div class="pdf-tabs">
+          <button class="pdf-tab-btn active" data-src="output/pdf/gamedev_programmer.pdf">Gamedev CV</button>
+          <button class="pdf-tab-btn" data-src="output/pdf/cpp_engine_programmer.pdf">C++ Engine CV</button>
+          <button class="pdf-tab-btn" data-src="output/pdf/unity_gameplay_programmer.pdf">Unity CV</button>
+        </div>
+        <button class="pdf-close" id="closeCvModal">&times;</button>
+      </div>
+      <iframe class="pdf-frame" id="pdfFrame" src="output/pdf/gamedev_programmer.pdf"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // CV Modal
+    const openCvBtn = document.getElementById('openCvBtn');
+    const closeCvModal = document.getElementById('closeCvModal');
+    const cvModal = document.getElementById('cvModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+    const pdfTabs = document.querySelectorAll('.pdf-tab-btn');
+
+    if (openCvBtn && cvModal) {
+      openCvBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        cvModal.classList.add('active');
+      });
+      closeCvModal.addEventListener('click', () => {
+        cvModal.classList.remove('active');
+      });
+      cvModal.addEventListener('click', (e) => {
+        if (e.target === cvModal) cvModal.classList.remove('active');
+      });
+      pdfTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          pdfTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          pdfFrame.src = tab.dataset.src;
+        });
+      });
+    }
+
+    // Easter egg: Heart
+    const heartBtn = document.getElementById('heartBtn');
+    const heartOverlay = document.getElementById('heartOverlay');
+    if (heartBtn && heartOverlay) {
+      heartBtn.addEventListener('click', () => heartOverlay.classList.add('active'));
+      heartOverlay.addEventListener('click', () => heartOverlay.classList.remove('active'));
+    }
+
+    // Easter egg: Tea
+    const DARLING_COUNT = 18;
+    const DARLING_PATH = 'darling/My_darling';
+    const teaOverlay = document.getElementById('teaOverlay');
+    const teaBtn = document.getElementById('teaBtn');
+    const closeTea = document.getElementById('closeTea');
+    const teaImg = document.getElementById('teaImage');
+    const teaTag = document.getElementById('teaTag');
+
+    let lastIndex = -1;
+    function randomIndex() {
+      if (DARLING_COUNT <= 1) return 1;
+      let i;
+      do {
+        i = Math.floor(Math.random() * DARLING_COUNT) + 1;
+      } while (i === lastIndex);
+      lastIndex = i;
+      return i;
+    }
+
+    function showRandomTea() {
+      if (!teaImg || !teaTag) return;
+      const i = randomIndex();
+      teaImg.src = DARLING_PATH + i + '.jpg';
+    }
+
+    if (teaBtn && teaOverlay) {
+      teaBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        teaOverlay.classList.add('active');
+        showRandomTea();
+      });
+      teaOverlay.addEventListener('click', showRandomTea);
+      if (closeTea) {
+        closeTea.addEventListener('click', (e) => {
+          e.stopPropagation();
+          teaOverlay.classList.remove('active');
+        });
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (cvModal) cvModal.classList.remove('active');
+        if (heartOverlay) heartOverlay.classList.remove('active');
+        if (teaOverlay) teaOverlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
